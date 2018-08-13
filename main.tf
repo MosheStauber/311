@@ -5,6 +5,8 @@ provider "aws" {
 resource "aws_instance" "dbrs_assessment" {
   ami = "ami-8c122be9"
   instance_type = "m5.large"
+  key_name   = "moshe"
+  security_groups = ["Moshe"]
 
   tags {
     Name = "assessment"
